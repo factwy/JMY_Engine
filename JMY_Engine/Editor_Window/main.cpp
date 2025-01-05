@@ -17,10 +17,10 @@ BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
-int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
-                     _In_opt_ HINSTANCE hPrevInstance,
-                     _In_ LPWSTR    lpCmdLine,
-                     _In_ int       nCmdShow)
+int APIENTRY wWinMain(_In_ HINSTANCE hInstance, // 프로그램의 인스턴스 핸들
+                     _In_opt_ HINSTANCE hPrevInstance,  // 바로앞에 실행된 현재 프로그램의 인스턴스 핸들, 없으면 NULL
+                     _In_ LPWSTR    lpCmdLine,  // 명령행 으로 입력된 프로그램 인수
+                     _In_ int       nCmdShow)   // 프로그램이 실행될 형태이며, 보통 모양 정보등이 전달됨.
 {
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
@@ -146,7 +146,37 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
+            
+            // DC란 화면 출력에 필요한 모든 정보를 가지는 데이터 구조체이며
+            // GDI모듈에 의해서 관리된다.
+            // 어떤 폰트를 사용할 것인지, 어떤 선의 굵기를 정해줄 것인지, 어떤 색을 사용할 것인지 ...
+            // 화면 출력에 필요한 모든 경우는 WINAPI에서 DC를 통해 작업을 진행할 수 있다.
+            
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
+            
+            HBRUSH brush = CreateSolidBrush(RGB(0, 0, 255));    // 파랑 브러쉬 생성
+            HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, brush); // 파랑 브러쉬 선택 및 흰색 브러쉬(원본) 반환
+
+            Rectangle(hdc, 10, 10, 20, 20);
+
+            SelectObject(hdc, oldBrush);    // 흰색 원본브러쉬로 선택
+            DeleteObject(brush);            // 파랑 브러쉬 삭제
+
+            HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
+            HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
+            Ellipse(hdc, 100, 100, 200, 200);
+
+            SelectObject(hdc, oldPen);
+            DeleteObject(redPen);
+
+            // 기본으로 자주 사용되는 GDI오브젝트를 미리 DC안에 만들어두었는데
+            // 그 오브젝트를 스톡 오브젝트라고 한다.
+
+            HBRUSH grayBrush = (HBRUSH)GetStockObject(GRAY_BRUSH);
+            oldBrush = (HBRUSH)SelectObject(hdc, grayBrush);
+            Rectangle(hdc, 400, 400, 500, 500);
+            SelectObject(hdc, oldBrush);
+            
             EndPaint(hWnd, &ps);
         }
         break;

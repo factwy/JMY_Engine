@@ -4,7 +4,12 @@
 #include "framework.h"
 #include "Editor_Window.h"
 
+#include "..\JMY_Engine_SOURCE\jmyApplication.h"
+//#pragma comment (lib, "..\x64\Debug\JMY_Engine_Window.lib")
+
 #define MAX_LOADSTRING 100
+
+Application app;
 
 // 전역 변수:
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
@@ -39,18 +44,36 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, // 프로그램의 인스턴스 
     }
 
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_EDITORWINDOW));
-
+    app.test();
     MSG msg;
 
-    // 기본 메시지 루프입니다:
-    while (GetMessage(&msg, nullptr, 0, 0))
+    // GetMessage(&msg, nullptr, 0, 0)
+    // 프로세스에서 발생한 메시지를 메시지 큐에서 가져오는 함수
+    // 메시지큐에 아무것도 없다면, 아무 메시지도 가져오지 않게된다.
+
+    // PeekMessage: 메시지큐의 메시지 유무에 상관없이 함수 리턴
+    //              리턴 값이 true인 경우 메시지가 있고, false인 경우에는 메시지가 없다고 가르킴
+
+    while (true)
     {
+        if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
+        {
+            if (msg.message == WM_QUIT)
+                break;
+        }
+
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
         {
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         }
+        else
+        {
+            // 메시지가 없을 경우 여기서 처리
+            // 게임 로직이 들어가게 됨.
+        }
     }
+
 
     return (int) msg.wParam;
 }

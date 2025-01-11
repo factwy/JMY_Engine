@@ -9,7 +9,7 @@
 
 #define MAX_LOADSTRING 100
 
-Application app;
+jmy::Application application;
 
 // 전역 변수:
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
@@ -44,7 +44,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, // 프로그램의 인스턴스 
     }
 
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_EDITORWINDOW));
-    app.test();
     MSG msg;
 
     // GetMessage(&msg, nullptr, 0, 0)
@@ -60,17 +59,17 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, // 프로그램의 인스턴스 
         {
             if (msg.message == WM_QUIT)
                 break;
-        }
-
-        if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
-        {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
+            if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+            {
+                TranslateMessage(&msg);
+                DispatchMessage(&msg);
+            }
         }
         else
         {
             // 메시지가 없을 경우 여기서 처리
             // 게임 로직이 들어가게 됨.
+            application.Run();
         }
     }
 
@@ -122,6 +121,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+   application.Initialize(hWnd);
 
    if (!hWnd)
    {
@@ -169,36 +169,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
-            
-            // DC란 화면 출력에 필요한 모든 정보를 가지는 데이터 구조체이며
-            // GDI모듈에 의해서 관리된다.
-            // 어떤 폰트를 사용할 것인지, 어떤 선의 굵기를 정해줄 것인지, 어떤 색을 사용할 것인지 ...
-            // 화면 출력에 필요한 모든 경우는 WINAPI에서 DC를 통해 작업을 진행할 수 있다.
-            
-            // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
-            
-            HBRUSH brush = CreateSolidBrush(RGB(0, 0, 255));    // 파랑 브러쉬 생성
-            HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, brush); // 파랑 브러쉬 선택 및 흰색 브러쉬(원본) 반환
-
-            Rectangle(hdc, 10, 10, 20, 20);
-
-            SelectObject(hdc, oldBrush);    // 흰색 원본브러쉬로 선택
-            DeleteObject(brush);            // 파랑 브러쉬 삭제
-
-            HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
-            HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
-            Ellipse(hdc, 100, 100, 200, 200);
-
-            SelectObject(hdc, oldPen);
-            DeleteObject(redPen);
-
-            // 기본으로 자주 사용되는 GDI오브젝트를 미리 DC안에 만들어두었는데
-            // 그 오브젝트를 스톡 오브젝트라고 한다.
-
-            HBRUSH grayBrush = (HBRUSH)GetStockObject(GRAY_BRUSH);
-            oldBrush = (HBRUSH)SelectObject(hdc, grayBrush);
-            Rectangle(hdc, 400, 400, 500, 500);
-            SelectObject(hdc, oldBrush);
             
             EndPaint(hWnd, &ps);
         }

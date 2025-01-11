@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\JMY_Engine\\JMY_Engine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{151D76DC-0108-4F9A-BECE-F92D5A414FCC}|Editor_Window\\Editor_Window.vcxproj|C:\\JMY_Engine\\JMY_Engine\\Editor_Window\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{151D76DC-0108-4F9A-BECE-F92D5A414FCC}|Editor_Window\\Editor_Window.vcxproj|solutionrelative:Editor_Window\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BF155682-4B14-4648-9B9F-B2962CA2FF6B}|JMY_Engine_SOURCE\\JMY_Engine_SOURCE.vcxitems|C:\\JMY_Engine\\JMY_Engine\\JMY_Engine_SOURCE\\jmyApplication.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BF155682-4B14-4648-9B9F-B2962CA2FF6B}|JMY_Engine_SOURCE\\JMY_Engine_SOURCE.vcxitems|solutionrelative:JMY_Engine_SOURCE\\jmyApplication.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF155682-4B14-4648-9B9F-B2962CA2FF6B}|JMY_Engine_SOURCE\\JMY_Engine_SOURCE.vcxitems|C:\\JMY_Engine\\JMY_Engine\\JMY_Engine_SOURCE\\CommonInclude.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BF155682-4B14-4648-9B9F-B2962CA2FF6B}|JMY_Engine_SOURCE\\JMY_Engine_SOURCE.vcxitems|solutionrelative:JMY_Engine_SOURCE\\CommonInclude.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF155682-4B14-4648-9B9F-B2962CA2FF6B}|JMY_Engine_SOURCE\\JMY_Engine_SOURCE.vcxitems|C:\\JMY_Engine\\JMY_Engine\\JMY_Engine_SOURCE\\jmyApplication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BF155682-4B14-4648-9B9F-B2962CA2FF6B}|JMY_Engine_SOURCE\\JMY_Engine_SOURCE.vcxitems|solutionrelative:JMY_Engine_SOURCE\\jmyApplication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF155682-4B14-4648-9B9F-B2962CA2FF6B}|JMY_Engine_SOURCE\\JMY_Engine_SOURCE.vcxitems|C:\\JMY_Engine\\JMY_Engine\\JMY_Engine_SOURCE\\jmyApplication.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BF155682-4B14-4648-9B9F-B2962CA2FF6B}|JMY_Engine_SOURCE\\JMY_Engine_SOURCE.vcxitems|solutionrelative:JMY_Engine_SOURCE\\jmyApplication.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{151D76DC-0108-4F9A-BECE-F92D5A414FCC}|Editor_Window\\Editor_Window.vcxproj|C:\\JMY_Engine\\JMY_Engine\\Editor_Window\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{151D76DC-0108-4F9A-BECE-F92D5A414FCC}|Editor_Window\\Editor_Window.vcxproj|solutionrelative:Editor_Window\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\JMY_Engine\\JMY_Engine\\Editor_Window\\main.cpp",
               "RelativeDocumentMoniker": "Editor_Window\\main.cpp",
               "ToolTip": "C:\\JMY_Engine\\JMY_Engine\\Editor_Window\\main.cpp",
               "RelativeToolTip": "Editor_Window\\main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AQIAAKYAAAAAKDMzMzMDwKsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-05T13:24:49.947Z",
               "IsPinned": true,
@@ -44,26 +48,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "jmyApplication.cpp",
               "DocumentMoniker": "C:\\JMY_Engine\\JMY_Engine\\JMY_Engine_SOURCE\\jmyApplication.cpp",
               "RelativeDocumentMoniker": "JMY_Engine_SOURCE\\jmyApplication.cpp",
               "ToolTip": "C:\\JMY_Engine\\JMY_Engine\\JMY_Engine_SOURCE\\jmyApplication.cpp",
               "RelativeToolTip": "JMY_Engine_SOURCE\\jmyApplication.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-08T12:58:34.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "CommonInclude.h",
+              "DocumentMoniker": "C:\\JMY_Engine\\JMY_Engine\\JMY_Engine_SOURCE\\CommonInclude.h",
+              "RelativeDocumentMoniker": "JMY_Engine_SOURCE\\CommonInclude.h",
+              "ToolTip": "C:\\JMY_Engine\\JMY_Engine\\JMY_Engine_SOURCE\\CommonInclude.h",
+              "RelativeToolTip": "JMY_Engine_SOURCE\\CommonInclude.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-11T05:47:37.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "jmyApplication.h",
               "DocumentMoniker": "C:\\JMY_Engine\\JMY_Engine\\JMY_Engine_SOURCE\\jmyApplication.h",
               "RelativeDocumentMoniker": "JMY_Engine_SOURCE\\jmyApplication.h",
               "ToolTip": "C:\\JMY_Engine\\JMY_Engine\\JMY_Engine_SOURCE\\jmyApplication.h",
               "RelativeToolTip": "JMY_Engine_SOURCE\\jmyApplication.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAARAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQvQwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-08T12:54:02.002Z",
               "EditorCaption": ""

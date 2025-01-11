@@ -1,5 +1,8 @@
 #pragma once
 #include "CommonInclude.h"
+#include "jmyGameObject.h"
+#include "jmyGameObject2.h"
+#include "jmyGameObject3.h"
 
 namespace jmy
 {
@@ -17,9 +20,9 @@ namespace jmy
 	private:
 		HWND mHwnd;
 		HDC mHdc;
-		float mSpeed;
-		float mX;
-		float mY;
+		GameObject mPlayer;
+		GameObject2 mPlayer2;
+		GameObject3 mPlayer3;
 	};
 }
 

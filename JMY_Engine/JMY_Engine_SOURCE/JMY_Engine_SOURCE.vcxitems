@@ -15,12 +15,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Input.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)jmyApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)jmyGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)jmyGameObject2.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)jmyGameObject3.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Input.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)jmyApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)jmyGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)jmyGameObject2.cpp" />

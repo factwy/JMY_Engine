@@ -1,4 +1,5 @@
 #include "jmyGameObject2.h"
+#include "Input.h"
 
 namespace jmy
 {
@@ -8,19 +9,19 @@ namespace jmy
 
 	void GameObject2::Update()
 	{
-		if (GetAsyncKeyState('A') & 0x8000)
+		if (Input::GetKey(eKeyCode::A))
 		{
 			mX -= 0.01f;
 		}
-		if (GetAsyncKeyState('D') & 0x8000)
+		if (Input::GetKey(eKeyCode::D))
 		{
 			mX += 0.01f;
 		}
-		if (GetAsyncKeyState('W') & 0x8000)
+		if (Input::GetKey(eKeyCode::W))
 		{
 			mY -= 0.01f;
 		}
-		if (GetAsyncKeyState('S') & 0x8000)
+		if (Input::GetKey(eKeyCode::S))
 		{
 			mY += 0.01f;
 		}

@@ -23,7 +23,7 @@ namespace jmy
 		HPEN pen = CreatePen(PS_SOLID, 2, RGB(0, 255, 0));
 		HPEN oldPen = (HPEN)SelectObject(hdc, pen);
 
-		Ellipse(hdc, 10 + mX, 10 + mY, 20 - mX, 20 - mY);
+		Ellipse(hdc, 100 + mX, 100 + mY, 200 - mX, 200 - mY);
 
 		SelectObject(hdc, oldBrush);    // 흰색 원본브러쉬로 선택
 		DeleteObject(brush);            // 파랑 브러쉬 삭제

@@ -1,4 +1,5 @@
 #include "jmyApplication.h"
+#include "Input.h"
 
 namespace jmy
 {
@@ -12,6 +13,7 @@ namespace jmy
 	{
 		mHwnd = hwnd;
 		mHdc = GetDC(hwnd);
+		Input::Initialize();
 		mPlayer.SetPosition(0.0f, 0.0f);
 		mPlayer2.SetPosition(200.0f, 200.0f);
 		mPlayer3.SetPosition(100.0f, 100.0f);
@@ -24,9 +26,10 @@ namespace jmy
 	}
 	void Application::Update()
 	{
+		Input::Update();
 		mPlayer.Update();
 		mPlayer2.Update();
-		mPlayer3.Update();
+		//mPlayer3.Update();
 	}
 	void Application::LateUpdate()
 	{

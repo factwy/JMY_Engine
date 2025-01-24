@@ -31,10 +31,17 @@ namespace jmy {
 
 		static void Initialize();
 		static void Update();
+		static void CreateKeys();
+		static void UpdateKeys();
+		static void UpdateKey(size_t i);
 
 		static bool GetKeyDown(eKeyCode code);
 		static bool GetKeyUp(eKeyCode code);
 		static bool GetKey(eKeyCode code);
+		
+		static bool IsKeyDown(size_t i);
+		static void UpdateKeyDown(size_t i);
+		static void UpdateKeyUp(size_t i);
 
 	private:
 		static std::vector<Key> mKeys;

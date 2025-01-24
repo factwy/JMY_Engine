@@ -12,6 +12,13 @@ namespace jmy {
 	};
 
 	void Input::Initialize() {
+		CreateKeys();
+	}
+	void Input::Update() {
+		UpdateKeys();
+	}
+
+	void Input::CreateKeys() {
 		for (size_t i = 0; i < (UINT)eKeyCode::End; i++) {
 			Key key = {};
 			key.bPressed = false;
@@ -21,24 +28,33 @@ namespace jmy {
 			mKeys.push_back(key);
 		}
 	}
-	void Input::Update() {
-		for (size_t i = 0; i < (UINT)eKeyCode::End; i++) {
-			// 키가 눌렸는지 아닌지
-			if (GetAsyncKeyState(ASCII[i]) & 0x8000) {
-				if (mKeys[i].bPressed == true)
-					mKeys[i].state = eKeyState::Pressed;
-				else
-					mKeys[i].state = eKeyState::Down;
-				mKeys[i].bPressed = true;
-			}
-			else {
-				if (mKeys[i].bPressed == true)
-					mKeys[i].state = eKeyState::Up;
-				else
-					mKeys[i].state = eKeyState::None;
-				mKeys[i].bPressed = false;
-			}
-		}
+	void Input::UpdateKeys() {
+		for (size_t i = 0; i < (UINT)eKeyCode::End; i++)
+			UpdateKey(i);
+	}
+	void Input::UpdateKey(size_t i) {
+		if (IsKeyDown(i))
+			UpdateKeyDown(i);
+		else
+			UpdateKeyUp(i);
+	}
+
+	bool Input::IsKeyDown(size_t i) {
+		return (GetAsyncKeyState(ASCII[i]) & 0x8000);
+	}
+	void Input::UpdateKeyDown(size_t i) {
+		if (mKeys[i].bPressed == true)
+			mKeys[i].state = eKeyState::Pressed;
+		else
+			mKeys[i].state = eKeyState::Down;
+		mKeys[i].bPressed = true;
+	}
+	void Input::UpdateKeyUp(size_t i) {
+		if (mKeys[i].bPressed == true)
+			mKeys[i].state = eKeyState::Up;
+		else
+			mKeys[i].state = eKeyState::None;
+		mKeys[i].bPressed = false;
 	}
 
 	bool Input::GetKeyDown(eKeyCode code) {

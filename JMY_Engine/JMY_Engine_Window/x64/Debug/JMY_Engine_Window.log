@@ -1,8 +1,14 @@
-﻿  jmyGameObject3.cpp
-C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject3.cpp(11,23): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject3.cpp(12,23): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject3.cpp(26,50): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject3.cpp(26,40): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject3.cpp(26,30): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject3.cpp(26,20): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  Input.cpp
+  jmyApplication.cpp
+  jmyGameObject.cpp
+  jmyGameObject2.cpp
+C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject.cpp(41,48): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject.cpp(41,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject.cpp(41,30): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject.cpp(41,21): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject2.cpp(41,46): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject2.cpp(41,37): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject2.cpp(41,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\JMY_Engine\JMY_Engine\JMY_Engine_SOURCE\jmyGameObject2.cpp(41,19): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
   JMY_Engine_Window.vcxproj -> C:\JMY_Engine\JMY_Engine\x64\Debug\JMY_Engine_Window.lib

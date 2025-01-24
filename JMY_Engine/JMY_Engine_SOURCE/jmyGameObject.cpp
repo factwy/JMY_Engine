@@ -1,5 +1,6 @@
 #include "jmyGameObject.h"
 #include "Input.h"
+#include "Time.h"
 
 namespace jmy
 {
@@ -9,21 +10,22 @@ namespace jmy
 
 	void GameObject::Update()
 	{
+		const float speed = 100.0f;
 		if (Input::GetKey(eKeyCode::Left))
 		{
-			mX -= 0.01f;
+			mX -= speed * Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::Right))
 		{
-			mX += 0.01f;
+			mX += speed * Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::Up))
 		{
-			mY -= 0.01f;
+			mY -= speed * Time::DeltaTime();
 		}
 		if (Input::GetKey(eKeyCode::Down))
 		{
-			mY += 0.01f;
+			mY += speed * Time::DeltaTime();
 		}
 	}
 	void GameObject::LateUpdate()

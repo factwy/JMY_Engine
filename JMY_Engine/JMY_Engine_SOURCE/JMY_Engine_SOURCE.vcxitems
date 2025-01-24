@@ -20,6 +20,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)jmyGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)jmyGameObject2.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)jmyGameObject3.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Time.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Input.cpp" />
@@ -27,5 +28,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)jmyGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)jmyGameObject2.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)jmyGameObject3.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Time.cpp" />
   </ItemGroup>
 </Project>
